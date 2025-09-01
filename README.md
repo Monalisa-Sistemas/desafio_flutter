@@ -1,4 +1,4 @@
-# 📦 Mini sistema de vendas
+# 📦 DESAFIO - Mini sistema de vendas
 
 Aplicativo Flutter multiplataforma para registro de vendas e visualização de faturamento utilizando dados binários e persistência local.
 
@@ -23,8 +23,10 @@ F5. Cancelar Venda Atual; (resetar)
 ATENÇÃO: 
 1. Arquivos .bin são somente para leitura dos dados.
 2. No banco local deverá conter somente os usuários, vendas, clientes e produtos relacionados para análise futura.
+3. Estrutura do banco local deverá ser criada pelo desenvolvedor (será analisadsa sua capaciade de modelagem).
 3. Na pesquisa de clientes deverá ter um único campo de pesquisa com busca automática ao digitar. Este campo deverá conseguir diferenciar a busca tanto por CPF/CNPJ quanto pelo nome do cliente.
 4. Na tela de listagem de vendas deverá conter um botão "Exportar para CSV" que gera um arquivo e permite compartilhar com alguém.
+5. Mantenha um fluxo geral simples e intuitivo para o usuário.
 
 
 ## 🚀 Funcionalidades Implementadas
