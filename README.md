@@ -6,7 +6,7 @@ Aplicativo Flutter multiplataforma para registro de vendas e visualização de f
 
 ## Descrição do projeto
 
-Este desafio consiste em desenvolver um mini aplicativo de vendas em FLUTTER onde o operador poderá fazer login/cadastro, realizar vendas de produtos bem como acompanhar o faturamento no período. O acesso aos dados de produtos deve ser por meio dos arquivos .bin na pasta "dataset", os usuários e vendas realizadas devem ser armazenadas em um banco de dados local definido pelo desenvolvedor.
+Este desafio consiste em desenvolver um mini aplicativo de vendas em FLUTTER onde o operador poderá fazer login/cadastro, realizar vendas de produtos bem como acompanhar o faturamento no período. O acesso aos dados de produtos deve ser por meio de um arquivo .bin na pasta "dataset", os usuários e vendas realizadas devem ser armazenadas em um banco de dados local definido pelo desenvolvedor.
 
 Obs: 
 
