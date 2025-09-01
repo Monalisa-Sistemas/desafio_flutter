@@ -6,7 +6,7 @@ Aplicativo Flutter multiplataforma para registro de vendas e visualização de f
 
 ## Descrição do projeto
 
-Este desafio consiste em desenvolver um mini aplicativo de vendas em FLUTTER onde o operador poderá fazer login/cadastro, realizar vendas para clientes bem como acompanhar o faturamento no período. O acesso aos dados de produtos e clientes deve ser por meio dos arquivos .bin na pasta "dataset", os usuários e vendas realizadas devem ser armazenadas em um banco de dados local definido pelo desenvolvedor.
+Este desafio consiste em desenvolver um mini aplicativo de vendas em FLUTTER onde o operador poderá fazer login/cadastro, realizar vendas de produtos bem como acompanhar o faturamento no período. O acesso aos dados de produtos deve ser por meio dos arquivos .bin na pasta "dataset", os usuários e vendas realizadas devem ser armazenadas em um banco de dados local definido pelo desenvolvedor.
 
 Obs: 
 
@@ -16,32 +16,30 @@ Caso seja usado em desktop, deverá conter os seguintes atalhos:
 
 F1. Iniciar Venda.\
 F2. Incluir Produto.\
-F3. Incluir Cliente.\
-F4. Finalizar Venda.\
-F5. Cancelar Venda Atual; (resetar)
+F3. Finalizar Venda.\
+F4. Cancelar Venda Atual; (resetar)
 
 ATENÇÃO: 
-1. Arquivos .bin são somente para leitura dos dados.
-2. No banco local deverá conter somente os usuários, vendas, clientes e produtos relacionados para análise futura.
+1. Arquivo .bin de produtos é somente para leitura dos dados.
+2. No banco local deverá conter somente os usuários cadastrados, vendas e produtos relacionados para análise futura.
 3. Estrutura do banco local deverá ser criada pelo desenvolvedor (será analisadsa sua capaciade de modelagem).
-3. Na pesquisa de clientes deverá ter um único campo de pesquisa com busca automática ao digitar. Este campo deverá conseguir diferenciar a busca tanto por CPF/CNPJ quanto pelo nome do cliente.
-4. Na tela de listagem de vendas deverá conter um botão "Exportar para CSV" que gera um arquivo e permite compartilhar com alguém.
-5. Mantenha um fluxo geral simples e intuitivo para o usuário.
-
+4. O filtro do produto deverá ser por meio de um único campo para preenchimento do código de barras ou descrição.
+5. Na tela de listagem de vendas deverá conter um botão "Exportar para CSV" que gera um arquivo e permite compartilhar com alguém.
+6. Mantenha um fluxo geral simples e intuitivo para o usuário.
 
 ## 🚀 Funcionalidades Implementadas
 
 Checklist das principais funcionalidades:
 
 - [ ] Login e cadastro local
-- [ ] Leitura de arquivos `.bin` (produtos e clientes)
+- [ ] Leitura do arquivo `.bin` de produtos
 - [ ] Iniciar venda e adição de produtos ao carrinho
 - [ ] Leitura do produto por código de barras utilizando a câmera do dispositivo
 - [ ] Apenas uma venda ativa por vez
 - [ ] Gráfico de vendas realizadas no período selecionado "Data inicial e final"
 - [ ] Listagem de vendas realizadas (somente cabeçalho e resumo)
 - [ ] Exportar vendas para CSV
-- [ ] Atalhos de teclado no desktop (F1 a F6)
+- [ ] Atalhos de teclado no desktop (F1 a F4)
 
 ---
 
