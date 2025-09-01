@@ -1,88 +1,99 @@
-# 📦 DESAFIO - Mini sistema de vendas
 
-Aplicativo Flutter multiplataforma para registro de vendas e visualização de faturamento utilizando dados binários e persistência local.
+# 🛒 Desafio Técnico: Tela de Busca e Seleção de Produtos
 
----
+## 🎯 Objetivo
 
-## Descrição do projeto
+Desenvolver uma tela de vendas onde o usuário poderá buscar por produtos, selecionar e finalizar venda informando um método de pagamento.
 
-Este desafio consiste em desenvolver um mini aplicativo de vendas em FLUTTER onde o operador poderá fazer login/cadastro, realizar vendas de produtos bem como acompanhar o faturamento no período. O acesso aos dados de produtos deve ser por meio de um arquivo .bin na pasta "dataset", os usuários e vendas realizadas devem ser armazenadas em um banco de dados local definido pelo desenvolvedor.
+Obs:
 
-Obs: 
-
-O Desenvolvedor terá a liberdade de escolher o banco de dados local justificando a escolha. \
-O projeto deve ser multiplataforma e ser responsivo tanto para dispositivos desktop quanto para mobile.
-Caso seja usado em desktop, deverá conter os seguintes atalhos:
-
-F1. Iniciar Venda.\
-F2. Incluir Produto.\
-F3. Finalizar Venda.\
-F4. Cancelar Venda Atual; (resetar)
-
-ATENÇÃO: 
-1. Arquivo .bin de produtos é somente para leitura dos dados.
-2. No banco local deverá conter somente os usuários cadastrados, vendas e produtos relacionados para análise futura.
-3. Estrutura do banco local deverá ser criada pelo desenvolvedor (será analisadsa sua capaciade de modelagem).
-4. O filtro do produto deverá ser por meio de um único campo para preenchimento do código de barras ou descrição.
-5. Na tela de listagem de vendas deverá conter um botão "Exportar para CSV" que gera um arquivo e permite compartilhar com alguém.
-6. Mantenha um fluxo geral simples e intuitivo para o usuário.
-
-## 🚀 Funcionalidades Implementadas
-
-Checklist das principais funcionalidades:
-
-- [ ] Login e cadastro local
-- [ ] Leitura do arquivo `.bin` de produtos
-- [ ] Iniciar venda e adição de produtos ao carrinho
-- [ ] Leitura do produto por código de barras utilizando a câmera do dispositivo
-- [ ] Apenas uma venda ativa por vez
-- [ ] Gráfico de vendas realizadas no período selecionado "Data inicial e final"
-- [ ] Listagem de vendas realizadas (somente cabeçalho e resumo)
-- [ ] Exportar vendas para CSV
-- [ ] Atalhos de teclado no desktop (F1 a F4)
+- Leitura dos produtos e formas de pagamento serão a partir de arquivos `.bin` na pasta **dataset**
+- Selecionar múltiplos produtos da lista
+- Exibir o total acumulado dos itens selecionados
+- Exibir resultados com animação e uma interface estilizada e responsiva
 
 ---
 
-## 🔧 Tecnologias Utilizadas
+## 📦 Funcionalidades Requeridas
 
-Liste os principais pacotes e ferramentas usados, com uma breve justificativa técnica para cada.
+### 🔍 Busca de Produtos
 
-- **Gerenciamento de estado:** 
-  > _Motivação: explique por que essa abordagem foi escolhida para gerenciar estado nesse projeto._
+- Leitura local de um arquivo `produtos.bin` contendo até 10 mil produtos
+- Campo de busca único:
+  - Entrada numérica: busca por **código de barras**
+  - Entrada textual: busca por **descrição do produto**
+- Resultados exibidos com **scroll eficiente e animação**
 
-- **Persistência local:** 
-  > _Motivação: explique como o pacote escolhido facilita a modelagem e consulta do banco._
+### ✅ Seleção de Produtos
 
-- **Leitura de arquivos binários:**  
-  > _Explique a abordagem usada para interpretar os dados binários._
+- Permitir seleção/deseleção de produtos na lista
+- Destaque visual para os selecionados
+- Cálculo exibidos em tempo real
 
-- **Leitor de código de barras:**  
-  > _Justifique a escolha e como foi integrada ao fluxo de venda._
+### 🎨 UI e Estilização
 
-- **Busca de cliente:**  
-  > _Explique como foi implementado o campo único de busca de cliente._
+- Lista com **animações** de entrada
+- Estilo visual agradável
+- Feedback visual em:
+  - Tipo de busca detectado
+  - Item selecionado
+  - Total e quantidade na tela
+- Suporte a tema claro e escuro (opcional)
 ---
 
-## 🏗️ Arquitetura
+## 🧠 Requisitos Técnicos
 
-Descreva brevemente a estrutura do projeto:
-
-- Como os módulos estão organizados?
-- Como as camadas foram separadas?
-- Como foi pensado o fluxo offline e retomada da venda?
-
----
-
-## 📱 Instruções de entrega
-
-1. Link do repositório público contendo o projeto e um README.md respondendo as perguntas deste documento;
-2. Enviar APK para testes em dispositivo físico;
+- Leitura eficiente de arquivos `.bin` contendo produtos e formas de pagamento
+- Gerenciamento de estado
+- Separação em camadas:
+  - UI
+  - Modelos de dados
+  - Lógica de seleção/busca
 
 ---
 
-## 🤔 Considerações Finais
+## 📝 Entrega Esperada
 
-- Quais foram os maiores desafios?
-- Há algo que você faria diferente em uma segunda versão?
+- Projeto Flutter em repositório público no github
+- `README.md` contendo:
+  - Instruções para rodar o projeto desktop
+  - Apk para teste em dispositivo físico
+  - Justificativas técnicas para os pacotes utilizados
 
 ---
+
+## 📊 Critérios de Avaliação
+
+- [ ] Leitura do arquivo `.bin`
+- [ ] Lógica de busca adaptativa e seleção
+- [ ] Animações e feedback visual
+- [ ] Organização e arquitetura do projeto
+- [ ] Justificativa das ferramentas utilizadas
+
+---
+
+## 📁 Exemplos de modelos de dados
+
+### Produto
+```json
+{
+  "codigo_barras": "7898994085881",
+  "descricao_longa": "MIST P/BOLO D BENTA LARANJA 450G",
+  "descricao_curta": "MIST P/BOLO D BENTA LARAN",
+  "preco_unitario": 4.99,
+  "saldo_estoque": 39,
+  "marca": "ISSAM"
+}
+```
+
+### Forma de Pagamento
+
+```json
+{
+  "id": 1,
+  "descricao": "PIX"
+}
+```
+---
+
+Boa sorte! 🍀
