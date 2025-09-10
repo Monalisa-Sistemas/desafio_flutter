@@ -7,7 +7,7 @@ Desenvolver uma tela de vendas onde o usuário poderá buscar por produtos, sele
 
 Obs:
 
-- Leitura dos produtos e formas de pagamento serão a partir de arquivos `.bin` na pasta **dataset**
+- Leitura dos produtos e formas de pagamento serão a partir de arquivos `.json` na pasta **dataset**
 - Selecionar múltiplos produtos da lista
 - Exibir o total acumulado dos itens selecionados
 - Exibir resultados com animação e uma interface estilizada e responsiva
@@ -18,7 +18,7 @@ Obs:
 
 ### 🔍 Busca de Produtos
 
-- Leitura local de um arquivo `produtos.bin` contendo até 10 mil produtos
+- Leitura local de um arquivo `produtos.json` contendo até 10 mil produtos
 - Campo de busca único:
   - Entrada numérica: busca por **código de barras**
   - Entrada textual: busca por **descrição do produto**
@@ -43,7 +43,7 @@ Obs:
 
 ## 🧠 Requisitos Técnicos
 
-- Leitura eficiente de arquivos `.bin` contendo produtos e formas de pagamento
+- Leitura eficiente de arquivos `.json` de produtos e formas de pagamento
 - Gerenciamento de estado
 - Separação em camadas:
   - UI
@@ -64,7 +64,7 @@ Obs:
 
 ## 📊 Critérios de Avaliação
 
-- [ ] Leitura do arquivo `.bin`
+- [ ] Leitura dos arquivos `.json`
 - [ ] Lógica de busca adaptativa e seleção
 - [ ] Animações e feedback visual
 - [ ] Organização e arquitetura do projeto
@@ -77,12 +77,12 @@ Obs:
 ### Produto
 ```json
 {
-  "codigo_barras": "7898994085881",
-  "descricao_longa": "MIST P/BOLO D BENTA LARANJA 450G",
-  "descricao_curta": "MIST P/BOLO D BENTA LARAN",
-  "preco_unitario": 4.99,
-  "saldo_estoque": 39,
-  "marca": "ISSAM"
+  "CodigoBarras": "7898994085881",
+  "DescricaoLonga": "MIST P/BOLO D BENTA LARANJA 450G",
+  "DescricaoCurta": "MIST P/BOLO D BENTA LARAN",
+  "PrecoUnitario": 4.99,
+  "SaldoEstoque": 39,
+  "Marca": "ISSAM"
 }
 ```
 
@@ -90,8 +90,8 @@ Obs:
 
 ```json
 {
-  "id": 1,
-  "descricao": "PIX"
+  "Id": 1,
+  "Descricao": "PIX"
 }
 ```
 ---
